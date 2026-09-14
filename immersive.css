@@ -16,6 +16,17 @@
 .reel-controls button:hover,.reel-controls button:focus-visible{color:#10140b;background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px #d5fa4922,0 0 34px #d5fa4988,0 8px 26px #000b;transform:translateY(-2px)}
 .reel-tabs button[aria-pressed=true]{background:var(--accent);color:#10140b;border-color:var(--accent);box-shadow:0 0 0 3px #d5fa4930,0 0 28px #d5fa4977,0 8px 24px #000b;font-weight:700}
 .reel-controls #playReel[aria-pressed=true]{background:#f4f2ed;color:#10140b;border-color:#f4f2ed;box-shadow:0 0 0 3px #f4f2ed22,0 0 28px #f4f2ed66,0 8px 24px #000b}
+.reel-stage.chapter-shift::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 18%,#050608cc 100%);animation:cinematicVeil .9s cubic-bezier(.2,.7,.2,1) both}
+.reel-stage.chapter-shift canvas{animation:cinematicCanvas .9s cubic-bezier(.2,.7,.2,1) both}
+.reel-stage.chapter-shift .reel-caption{animation:cinematicCaption .75s cubic-bezier(.2,.7,.2,1) both}
+@keyframes cinematicVeil{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+@keyframes cinematicCanvas{0%{opacity:.18;transform:scale(1.08);filter:blur(14px) saturate(.7)}45%{opacity:.72;transform:scale(1.025);filter:blur(3px) saturate(1.15)}100%{opacity:1;transform:scale(1);filter:none}}
+@keyframes cinematicCaption{0%{opacity:0;transform:translateY(24px);filter:blur(8px);letter-spacing:.08em}100%{opacity:1;transform:none;filter:none;letter-spacing:normal}}
+.reel-stage canvas.berlin-vertical{transform:rotate(90deg) scale(.64);transform-origin:center center}
+.reel-stage.chapter-shift canvas.berlin-vertical{animation-name:cinematicBerlinCanvas}
+@keyframes cinematicBerlinCanvas{0%{opacity:.18;transform:rotate(90deg) scale(.72);filter:blur(14px) saturate(.7)}45%{opacity:.72;transform:rotate(90deg) scale(.67);filter:blur(3px) saturate(1.15)}100%{opacity:1;transform:rotate(90deg) scale(.64);filter:none}}
+@media(prefers-reduced-motion:reduce){.reel-stage.chapter-shift::after,.reel-stage.chapter-shift canvas,.reel-stage.chapter-shift .reel-caption{animation:none}}
+@media(max-width:700px){.reel-stage canvas.berlin-vertical{transform:rotate(90deg) scale(.5)}@keyframes cinematicBerlinCanvas{0%{opacity:.18;transform:rotate(90deg) scale(.58);filter:blur(12px)}45%{opacity:.72;transform:rotate(90deg) scale(.53);filter:blur(3px)}100%{opacity:1;transform:rotate(90deg) scale(.5);filter:none}}}
 @media(prefers-reduced-motion:reduce){.hero-lightverse::after,.lightverse-content>*{animation:none;opacity:1}}
 .typing-char{display:inline-block;opacity:.04;transform:translateY(5px);filter:blur(2px);transition:opacity .28s ease,transform .28s ease,filter .28s ease}.typing-char.is-visible{opacity:1;transform:none;filter:none}
 @media(prefers-reduced-motion:reduce){.typing-char{opacity:1;transform:none;filter:none;transition:none}}
