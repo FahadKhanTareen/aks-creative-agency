@@ -30,3 +30,8 @@
 @media(prefers-reduced-motion:reduce){.hero-lightverse::after,.lightverse-content>*{animation:none;opacity:1}}
 .typing-char{display:inline-block;opacity:.04;transform:translateY(5px);filter:blur(2px);transition:opacity .28s ease,transform .28s ease,filter .28s ease}.typing-char.is-visible{opacity:1;transform:none;filter:none}
 @media(prefers-reduced-motion:reduce){.typing-char{opacity:1;transform:none;filter:none;transition:none}}
+
+.reel-stage .reel-video{position:absolute;top:15%;left:0;width:100%;height:58%;object-fit:contain;opacity:0;pointer-events:none;background:#050608;transition:opacity .3s;contain:layout paint;}
+.reel-stage .reel-video.is-active{opacity:1;}
+@media(max-width:700px){.reel-stage .reel-video{top:19%;height:42%;}}
+
