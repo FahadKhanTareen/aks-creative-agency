@@ -17,9 +17,13 @@
 .reel-tabs button[aria-pressed=true]{background:var(--accent);color:#10140b;border-color:var(--accent);box-shadow:0 0 0 3px #d5fa4930,0 0 28px #d5fa4977,0 8px 24px #000b;font-weight:700}
 .reel-controls #playReel[aria-pressed=true]{background:#f4f2ed;color:#10140b;border-color:#f4f2ed;box-shadow:0 0 0 3px #f4f2ed22,0 0 28px #f4f2ed66,0 8px 24px #000b}
 .reel-stage.chapter-shift::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 18%,#050608cc 100%);animation:cinematicVeil .9s cubic-bezier(.2,.7,.2,1) both}
+.reel-stage::before{content:'';position:absolute;inset:-25%;z-index:1;pointer-events:none;opacity:.22;mix-blend-mode:screen;background:conic-gradient(from 248deg at 16% 112%,transparent 0 12deg,#d5fa4930 18deg,#d5fa4908 28deg,transparent 38deg 152deg,#b9dfff20 160deg,#b9dfff04 173deg,transparent 183deg 360deg);filter:blur(13px);transform:rotate(-3deg);animation:beamSweep 14s ease-in-out infinite alternate}
+.reel-stage::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 14% 104%,#d5fa4926 0 2%,transparent 14%),radial-gradient(circle at 86% 104%,#c5e7ff1c 0 2%,transparent 16%);mix-blend-mode:screen;opacity:.6}
+.reel-stage.chapter-shift::after{z-index:3;background:radial-gradient(circle at 50% 50%,transparent 18%,#050608cc 100%);animation:cinematicVeil .9s cubic-bezier(.2,.7,.2,1) both}
 .reel-stage.chapter-shift canvas{animation:cinematicCanvas .9s cubic-bezier(.2,.7,.2,1) both}
 .reel-stage.chapter-shift .reel-caption{animation:cinematicCaption .75s cubic-bezier(.2,.7,.2,1) both}
 @keyframes cinematicVeil{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+@keyframes beamSweep{0%{transform:rotate(-6deg) scale(1.05);opacity:.12}50%{opacity:.25}100%{transform:rotate(6deg) scale(1.1);opacity:.18}}
 @keyframes cinematicCanvas{0%{opacity:.18;transform:scale(1.08);filter:blur(14px) saturate(.7)}45%{opacity:.72;transform:scale(1.025);filter:blur(3px) saturate(1.15)}100%{opacity:1;transform:scale(1);filter:none}}
 @keyframes cinematicCaption{0%{opacity:0;transform:translateY(24px);filter:blur(8px);letter-spacing:.08em}100%{opacity:1;transform:none;filter:none;letter-spacing:normal}}
 @media(prefers-reduced-motion:reduce){.reel-stage.chapter-shift::after,.reel-stage.chapter-shift canvas,.reel-stage.chapter-shift .reel-caption{animation:none}}
