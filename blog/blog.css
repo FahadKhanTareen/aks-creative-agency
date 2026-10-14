@@ -5,3 +5,6 @@
 .article-visual{margin:56px 0}.article-visual img{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)}.article-visual figcaption{margin-top:12px;color:#73786e;font:500 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
 
 .article-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000;border:1px solid var(--line)}
+
+/* Editorial concept images: preserve the complete composition on mobile. */
+.concept-visual img{height:auto;aspect-ratio:auto;object-fit:contain}.concept-visual figcaption{font:400 13px/1.65 var(--sans);letter-spacing:0;text-transform:none;color:var(--muted)}.concept-label{display:block;margin-bottom:6px;font:500 10px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
