@@ -14,9 +14,27 @@
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/what-to-send-a-studio-before-a-projection-mapping-quote</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/show-week-schedule-for-projection-mapping</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/choosing-a-media-server-for-projection-mapping</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/how-projection-mapping-transforms-architecture</loc>
