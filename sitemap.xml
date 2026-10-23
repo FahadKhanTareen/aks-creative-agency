@@ -14,9 +14,15 @@
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/permissions-for-public-projection-mapping-shows</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/edge-blending-for-multi-projector-projection-mapping</loc>
