@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -201,6 +201,12 @@
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/rigging-and-mounting-projectors-for-outdoor-projection-mapping</loc>
     <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/video-codecs-and-frame-rates-for-projection-mapping</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
