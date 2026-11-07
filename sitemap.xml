@@ -14,9 +14,15 @@
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aks-creative-agency.vercel.app/blog/budgeting-a-projection-mapping-show-what-drives-the-cost</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aks-creative-agency.vercel.app/blog/planning-an-augmented-reality-activation-for-a-live-event</loc>
