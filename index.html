@@ -36,7 +36,7 @@
       "@id": "https://aks-creative-agency.vercel.app/#website",
       "url": "https://aks-creative-agency.vercel.app/",
       "name": "AKS Creative Studio",
-      "inLanguage": "en-PK"
+      "inLanguage": "en"
     },
     {
       "@type": "ProfessionalService",
@@ -55,7 +55,7 @@
         "@type": "OfferCatalog",
         "name": "Two ways to work with AKS",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Large Format Spectacle", "serviceType": "Architectural projection mapping", "description": "Architectural projection mapping, immersive installations, live event visuals, LED facades, VR / AR, HoloFans and mesh." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Large Format Spectacle", "serviceType": "Architectural projection mapping", "description": "Architectural projection mapping, immersive installations, live event visuals, LED facades, VR / AR, HoloFans and mesh. Drone shows and fireworks are delivered with specialist partners." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Freelance Content", "serviceType": "Motion design", "description": "2D and 3D motion graphics, brand films and promos, short-form social, title sequences and loops, sound design, AI-assisted production." } }
         ]
       },
@@ -69,8 +69,62 @@
       "jobTitle": "Projection Mapping Artist",
       "worksFor": { "@id": "https://aks-creative-agency.vercel.app/#business" },
       "award": [
-        "2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, Berlin 2019",
+        "2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, Berlin 2019 (as lead artist with Artec)",
         "BBBank Newcomer, Schlosslichtspiele Karlsruhe 2021"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aks-creative-agency.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does AKS Creative Studio do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AKS Creative Studio is a projection mapping and immersive media studio founded in 2019 by projection mapping artist Fahad Khan Tareen. It designs and runs architectural projection mapping, immersive installations, live event visuals, LED facade content, VR and AR experiences, and HoloFan and mesh displays. It also produces motion graphics and brand films."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is AKS based, and where does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The studio is based in Islamabad, Pakistan. It takes projects in Pakistan and internationally, working remotely or on site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kinds of sites has AKS mapped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "National monuments, heritage buildings, event stages, and hotel and mall facades. Examples include Minar-e-Pakistan in Lahore, Parliament House in Islamabad, Mohatta Palace in Karachi, Rohtas Fort and the Pakistan Monument."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What awards has the work won?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 2019 entry created by Fahad Khan Tareen as lead artist with Artec took 2nd place at the World Championship of Projection Mapping, held at the 5th Festival of Lights in Berlin. The BBBank Newcomer award at Schlosslichtspiele Karlsruhe followed in 2021."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AKS provide drone shows and fireworks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, through specialist partners. AKS designs the show and its projection content, and partner companies fly the drones and fire the pyrotechnics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start a project and get a quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the scope, timeline, budget and site details. You are told early what is possible and what is not, then a concept is developed and the show is built and run on site. The Field Notes article on what to send a studio before a quote lists the drawings and photos that help."
+          }
+        }
       ]
     }
   ]
@@ -344,6 +398,8 @@
   .capability .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;}
   .capability h3{font-size:30px;font-weight:800;text-transform:uppercase;margin:14px 0 18px;}
   .capability p{color:var(--text-dim);font-size:14.5px;line-height:1.8;}
+  .faq-grid .capability h3{font-size:19px;text-transform:none;line-height:1.3;margin:0 0 14px;}
+  .faq-grid .capability a{color:var(--accent);}
 
   /* ---------- RECOGNITION ---------- */
   .recognition{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
@@ -861,7 +917,7 @@
   <div class="wrap hero-inner">
     <div class="lightverse-content">
       <span class="eyebrow-badge">AKS CREATIVE STUDIO &middot; ARCHITECTURE IN MOTION</span>
-      <h1 class="lightverse-title">AKS CREATIVE<br>STUDIO</h1>
+      <h1 class="lightverse-title">AKS CREATIVE <br>STUDIO</h1>
       <p class="studio-location">Projection mapping studio · Islamabad, Pakistan</p>
       <p class="lightverse-copy">Architecture, motion and light, designed to stop a crowd in its tracks.</p>
       <p class="tower-instruction">MOVE YOUR CURSOR TO REVEAL THE TOWER <span>&rarr;</span></p>
@@ -963,6 +1019,7 @@
         <p>2D &amp; 3D motion graphics · Brand films and promos · Short-form social · Title sequences and loops · Sound design · AI-assisted production</p>
       </div>
     </div>
+    <p class="section-desc">Drone shows and fireworks are delivered with specialist partners as part of a combined show.</p>
   </div>
 </section>
 
@@ -977,7 +1034,7 @@
         <div class="achievement">
           <span class="eyebrow">RECOGNITION</span>
           <h3>World Championship</h3>
-          <p>2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin 2019</p>
+          <p>2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin 2019. Created as lead artist with Artec.</p>
         </div>
         <div class="achievement">
           <span class="eyebrow">AWARD</span>
@@ -1241,9 +1298,44 @@
       <div class="about-text">
         <p class="about-lead word-reveal">Fahad Khan Tareen is a projection mapping artist and immersive experience designer working at the intersection of architecture, motion and light. For seven years his work has turned static surfaces (national monuments, palaces, forts, hotel and mall facades) into moving canvases, run live in front of a crowd.</p>
         <div class="about-side">
-          <p>His projection mapping has run on Pakistan's own monuments (Minar-e-Pakistan, Parliament House, Mohatta Palace, Rohtas Fort) and on the international stage, where a 2019 entry took 2nd place at the World Championship of Projection Mapping in Berlin, followed by the BBBank Newcomer award in Karlsruhe in 2021.</p>
+          <p>His projection mapping has run on Pakistan's own monuments (Minar-e-Pakistan, Parliament House, Mohatta Palace, Rohtas Fort) and on the international stage, where a 2019 entry he created as lead artist with Artec took 2nd place at the World Championship of Projection Mapping in Berlin, followed by the BBBank Newcomer award in Karlsruhe in 2021.</p>
           <p>The practice spans architectural projection mapping, interactive installations, VR / AR, and AI-assisted content. Built the same way every time: connect on the constraints, concept the idea, then build and run it on site until it works exactly as drawn.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section-pad reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">QUESTIONS</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="capability-grid faq-grid">
+      <div class="capability">
+        <h3>What does AKS Creative Studio do?</h3>
+        <p>AKS Creative Studio is a projection mapping and immersive media studio founded in 2019 by projection mapping artist Fahad Khan Tareen. It designs and runs architectural projection mapping, immersive installations, live event visuals, LED facade content, VR and AR experiences, and HoloFan and mesh displays. It also produces motion graphics and brand films.</p>
+      </div>
+      <div class="capability">
+        <h3>Where is AKS based, and where does it work?</h3>
+        <p>The studio is based in Islamabad, Pakistan. It takes projects in Pakistan and internationally, working remotely or on site.</p>
+      </div>
+      <div class="capability">
+        <h3>What kinds of sites has AKS mapped?</h3>
+        <p>National monuments, heritage buildings, event stages, and hotel and mall facades. Examples include Minar-e-Pakistan in Lahore, Parliament House in Islamabad, Mohatta Palace in Karachi, Rohtas Fort and the Pakistan Monument.</p>
+      </div>
+      <div class="capability">
+        <h3>What awards has the work won?</h3>
+        <p>A 2019 entry created by Fahad Khan Tareen as lead artist with Artec took 2nd place at the World Championship of Projection Mapping, held at the 5th Festival of Lights in Berlin. The BBBank Newcomer award at Schlosslichtspiele Karlsruhe followed in 2021.</p>
+      </div>
+      <div class="capability">
+        <h3>Does AKS provide drone shows and fireworks?</h3>
+        <p>Yes, through specialist partners. AKS designs the show and its projection content, and partner companies fly the drones and fire the pyrotechnics.</p>
+      </div>
+      <div class="capability">
+        <h3>How do I start a project and get a quote?</h3>
+        <p>Send the scope, timeline, budget and site details. You are told early what is possible and what is not, then a concept is developed and the show is built and run on site. The Field Notes article on <a href="/blog/what-to-send-a-studio-before-a-projection-mapping-quote">what to send a studio before a quote</a> lists the drawings and photos that help.</p>
       </div>
     </div>
   </div>
