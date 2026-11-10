@@ -14,6 +14,7 @@ Large Format Spectacle:
 - LED facades
 - VR / AR
 - HoloFans and mesh
+- Drone shows and fireworks, delivered with specialist partners as part of a combined show
 
 Freelance Content:
 - 2D and 3D motion graphics
@@ -24,7 +25,7 @@ Freelance Content:
 - AI-assisted production
 
 ## Recognition
-- 2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin, 2019
+- 2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin, 2019. Created by Fahad Khan Tareen as lead artist with Artec.
 - BBBank Newcomer, Schlosslichtspiele Karlsruhe, 2021
 
 ## Selected work
@@ -53,5 +54,6 @@ remote or on the ground.
 
 ## Key pages
 - Home, work and contact: https://aks-creative-agency.vercel.app/
+- Common questions: https://aks-creative-agency.vercel.app/#faq
 - Field Notes (articles on projection mapping production): https://aks-creative-agency.vercel.app/blog/
 - Privacy policy: https://aks-creative-agency.vercel.app/privacy
