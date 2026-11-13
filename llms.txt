@@ -25,7 +25,7 @@ Freelance Content:
 - AI-assisted production
 
 ## Recognition
-- 2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin, 2019. Created by Fahad Khan Tareen as lead artist with Artec.
+- 2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, TV Tower, Berlin, 2019. Created by Fahad Khan Tareen as lead artist with Artec. [Festival results](https://festival-of-lights.de/en/championship2019/)
 - BBBank Newcomer, Schlosslichtspiele Karlsruhe, 2021
 
 ## Selected work
@@ -54,6 +54,18 @@ remote or on the ground.
 - [AKS Creative Studio on LinkedIn](https://www.linkedin.com/company/aks-creative-studios/)
 - [AKS Creative Studio on Instagram](https://www.instagram.com/projectionmappingpk/)
 - [Fahad Khan Tareen on LinkedIn](https://www.linkedin.com/in/fahadarshadkhantareen/)
+
+## Services
+- [Architectural projection mapping](https://aks-creative-agency.vercel.app/services/architectural-projection-mapping): Monuments, heritage buildings and facades: survey, content, projector design and live show.
+- [LED facade content](https://aks-creative-agency.vercel.app/services/led-facade-content): Content made for the pixel map and viewing distance of installed screens and media walls.
+- [VR and AR activations](https://aks-creative-agency.vercel.app/services/vr-ar-activations): Headset walkthroughs, phone AR and HoloFan displays for launches and exhibitions.
+- [Motion design and brand films](https://aks-creative-agency.vercel.app/services/motion-design): 2D and 3D animation, titles, loops and social content, produced remotely.
+
+## Where we work internationally
+- [Projection mapping in UAE](https://aks-creative-agency.vercel.app/projection-mapping/uae)
+- [Projection mapping in Saudi Arabia](https://aks-creative-agency.vercel.app/projection-mapping/saudi-arabia)
+- [Projection mapping in Thailand](https://aks-creative-agency.vercel.app/projection-mapping/thailand)
+- [Projection mapping in Malaysia](https://aks-creative-agency.vercel.app/projection-mapping/malaysia)
 
 ## Key pages
 - [Home, work and contact](https://aks-creative-agency.vercel.app/): services, selected work, awards and contact details
