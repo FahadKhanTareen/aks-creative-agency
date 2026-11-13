@@ -49,23 +49,61 @@ try{var r=document.referrer,ls=null;try{ls=localStorage.getItem("aksGateSeen")}c
       "description": "Projection mapping, immersive media, motion design and interactive installation studio based in Islamabad, Pakistan.",
       "telephone": "+92-300-0055055",
       "email": "fahadarshadkhantareen@gmail.com",
-      "founder": { "@id": "https://aks-creative-agency.vercel.app/#fahad" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
+      "founder": {
+        "@id": "https://aks-creative-agency.vercel.app/#fahad"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Islamabad",
+        "addressCountry": "PK"
+      },
       "foundingDate": "2019",
       "sameAs": [
         "https://www.linkedin.com/company/aks-creative-studios/",
         "https://www.instagram.com/projectionmappingpk/"
       ],
-      "areaServed": ["Pakistan", "Worldwide"],
+      "areaServed": [
+        "Pakistan",
+        "Worldwide"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Two ways to work with AKS",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Large Format Spectacle", "serviceType": "Architectural projection mapping", "description": "Architectural projection mapping, immersive installations, live event visuals, LED facades, VR / AR, HoloFans and mesh. Drone shows and fireworks are delivered with specialist partners." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Freelance Content", "serviceType": "Motion design", "description": "2D and 3D motion graphics, brand films and promos, short-form social, title sequences and loops, sound design, AI-assisted production." } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Large Format Spectacle",
+              "serviceType": "Architectural projection mapping",
+              "description": "Architectural projection mapping, immersive installations, live event visuals, LED facades, VR / AR, HoloFans and mesh. Drone shows and fireworks are delivered with specialist partners."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Freelance Content",
+              "serviceType": "Motion design",
+              "description": "2D and 3D motion graphics, brand films and promos, short-form social, title sequences and loops, sound design, AI-assisted production."
+            }
+          }
         ]
       },
-      "knowsAbout": ["Projection Mapping", "Immersive Media", "Interactive Installations", "Motion Design", "Augmented Reality", "Virtual Reality"]
+      "knowsAbout": [
+        "Projection Mapping",
+        "Immersive Media",
+        "Interactive Installations",
+        "Motion Design",
+        "Augmented Reality",
+        "Virtual Reality"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aks-creative-agency.vercel.app/images/aks-logo.png",
+        "width": 512,
+        "height": 512
+      }
     },
     {
       "@type": "Person",
@@ -73,12 +111,21 @@ try{var r=document.referrer,ls=null;try{ls=localStorage.getItem("aksGateSeen")}c
       "name": "Fahad Khan Tareen",
       "url": "https://aks-creative-agency.vercel.app/#interactivePortrait",
       "jobTitle": "Projection Mapping Artist",
-      "sameAs": ["https://www.linkedin.com/in/fahadarshadkhantareen/"],
-      "worksFor": { "@id": "https://aks-creative-agency.vercel.app/#business" },
+      "sameAs": [
+        "https://www.linkedin.com/in/fahadarshadkhantareen/"
+      ],
+      "worksFor": {
+        "@id": "https://aks-creative-agency.vercel.app/#business"
+      },
       "award": [
         "2nd Place, 5th Festival of Lights, World Championship of Projection Mapping, Berlin 2019 (as lead artist with Artec)",
         "BBBank Newcomer, Schlosslichtspiele Karlsruhe 2021"
-      ]
+      ],
+      "subjectOf": {
+        "@type": "WebPage",
+        "name": "World Championship of Projection Mapping 2019, Festival of Lights Berlin",
+        "url": "https://festival-of-lights.de/en/championship2019/"
+      }
     },
     {
       "@type": "FAQPage",
@@ -1467,7 +1514,7 @@ try{var r=document.referrer,ls=null;try{ls=localStorage.getItem("aksGateSeen")}c
 
 <div class="lightbox" id="lightbox">
   <div class="lightbox-close" id="lightboxClose">&times;</div>
-  <img id="lightboxImg" src="" alt="" width="1600" height="900">
+  <img id="lightboxImg" alt="" width="1600" height="900">
 </div>
 
 <script>
@@ -2568,7 +2615,7 @@ try{var r=document.referrer,ls=null;try{ls=localStorage.getItem("aksGateSeen")}c
       lightbox.classList.add('open');
     });
   });
-  function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
+  function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.removeAttribute('src'); }
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
