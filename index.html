@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>/* skip the entry gate for visitors from search or other sites, deep links and returning visitors */
+try{var r=document.referrer,ls=null;try{ls=localStorage.getItem("aksGateSeen")}catch(e){}if((r&&new URL(r).hostname!==location.hostname)||location.hash||ls)document.documentElement.classList.add("gate-skip");}catch(e){}</script>
 <title>AKS Creative Studio — Projection Mapping & Immersive Media</title>
 <meta name="description" content="AKS Creative Studio creates projection mapping, immersive installations and motion design for monuments, venues and brands in Pakistan and worldwide.">
 <meta name="keywords" content="projection mapping artist, projection mapping Pakistan, architectural projection mapping, immersive experience designer, experiential design, interactive installations, creative technology">
@@ -141,7 +143,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="artist-frames-cutout/frame_0036.webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&family=JetBrains+Mono:wght@400..600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&family=JetBrains+Mono:wght@400..600&display=swap"></noscript>
 <link rel="stylesheet" href="lenis.css">
 <script src="lenis.min.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9253322076379767" crossorigin="anonymous"></script>
@@ -405,6 +407,14 @@
   .capability p{color:var(--text-dim);font-size:14.5px;line-height:1.8;}
   .faq-grid .capability h3{font-size:19px;text-transform:none;line-height:1.3;margin:0 0 14px;}
   .faq-grid .capability a{color:var(--accent);}
+  .hero-h1{margin:0;font-weight:inherit;}
+  .hero-h1 .lightverse-title,.hero-h1 .studio-location{display:block;}
+  .notes-grid a.capability{display:block;color:inherit;text-decoration:none;transition:background .25s;}
+  .notes-grid a.capability:hover,.notes-grid a.capability:focus-visible{background:var(--bg-soft,#0d0f0e);}
+  .notes-grid a.capability h3{color:var(--text);}
+  .notes-grid .capability p{margin:0;}
+  .notes-more{margin-top:28px;font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;}
+  .notes-more a{color:var(--accent);}
 
   /* ---------- RECOGNITION ---------- */
   .recognition{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
@@ -749,6 +759,7 @@
     cursor:pointer;
   }
   .start-gate.hidden{visibility:hidden;pointer-events:none;}
+  html.gate-skip .start-gate{display:none;}
   .start-gate::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(2,4,8,.18),rgba(2,4,8,.65));}
   .gate-logo-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
   .gate-tiles{
@@ -868,7 +879,7 @@
 <div class="journey-progress" aria-hidden="true"><span id="journeyProgress"></span></div>
 
 <div class="start-gate" id="startGate">
-  <video class="gate-logo-video" autoplay muted loop playsinline preload="metadata" poster="images/aks-logo-poster.jpg" aria-label="AKS Creative Studio logo reveal"><source src="images/aks-logo-optimized.mp4" type="video/mp4"></video>
+  <video class="gate-logo-video" autoplay muted loop playsinline preload="metadata" poster="images/aks-logo-poster.webp" aria-label="AKS Creative Studio logo reveal"><source src="images/aks-logo-optimized.mp4" type="video/mp4"></video>
   <div class="gate-tiles" id="gateTiles"></div>
   <div class="start-gate-inner">
     <div class="gate-kicker">AKS CREATIVE STUDIO · EST. 2019</div>
@@ -922,8 +933,8 @@
   <div class="wrap hero-inner">
     <div class="lightverse-content">
       <span class="eyebrow-badge">AKS CREATIVE STUDIO &middot; ARCHITECTURE IN MOTION</span>
-      <h1 class="lightverse-title">AKS CREATIVE <br>STUDIO</h1>
-      <p class="studio-location">Projection mapping studio · Islamabad, Pakistan</p>
+      <h1 class="hero-h1"><span class="lightverse-title">AKS CREATIVE <br>STUDIO</span>
+      <span class="studio-location">Projection mapping studio · Islamabad, Pakistan</span></h1>
       <p class="lightverse-copy">Architecture, motion and light, designed to stop a crowd in its tracks.</p>
       <p class="tower-instruction">MOVE YOUR CURSOR TO REVEAL THE TOWER <span>&rarr;</span></p>
       <div class="project-console" aria-label="Start a project">
@@ -1048,7 +1059,7 @@
         </div>
       </div>
       <div class="award-frame bracketed">
-        <img width="900" height="1125" src="images/award.jpg" alt="Festival of Lights World Championship of Projection Mapping award and certificate" class="lb" loading="lazy" decoding="async">
+        <img width="900" height="1125" src="images/award.webp" alt="Festival of Lights World Championship of Projection Mapping award and certificate" class="lb" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -1071,7 +1082,7 @@
     <div class="work-item" data-cat="competition">
       <div class="work-card">
         <div class="work-media scrub-media" data-frames="sequence" data-frame-count="320" style="aspect-ratio:1600/207;">
-          <img width="1600" height="207" class="lb" loading="lazy" decoding="async" src="images/berlin-hero.jpg" alt="Berlin World Championship of Projection Mapping entry">
+          <img width="1600" height="207" class="lb" loading="lazy" decoding="async" src="images/berlin-hero.webp" srcset="images/berlin-hero-800.webp 800w, images/berlin-hero.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="Berlin World Championship of Projection Mapping entry">
           <canvas class="scrub-canvas" aria-hidden="true"></canvas>
           <div class="scrub-hint">
             <span class="scrub-hint-icon">&harr;</span>
@@ -1088,7 +1099,7 @@
     <div class="work-item" data-cat="competition">
       <div class="work-card">
         <div class="work-media scrub-media" data-frames="sequence-bbbank" data-frame-count="248" style="aspect-ratio:1600/207;">
-          <img width="1600" height="207" class="lb" loading="lazy" decoding="async" src="images/bbbank-hero.jpg" alt="BBBank Newcomer entry, Karlsruhe Palace">
+          <img width="1600" height="207" class="lb" loading="lazy" decoding="async" src="images/bbbank-hero.webp" srcset="images/bbbank-hero-800.webp 800w, images/bbbank-hero.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="BBBank Newcomer entry, Karlsruhe Palace">
           <canvas class="scrub-canvas" aria-hidden="true"></canvas>
           <div class="scrub-hint">
             <span class="scrub-hint-icon">&harr;</span>
@@ -1105,7 +1116,7 @@
     <div class="work-item" data-cat="monument">
       <div class="work-card">
         <div class="work-media scrub-media" data-frames="sequence-japan" data-frame-count="316" style="aspect-ratio:1600/649;">
-          <img width="1600" height="649" class="lb" loading="lazy" decoding="async" src="images/japan-hero.jpg" alt="Japan-themed monument mapping show, Great Wave and rising sun">
+          <img width="1600" height="649" class="lb" loading="lazy" decoding="async" src="images/japan-hero.webp" srcset="images/japan-hero-800.webp 800w, images/japan-hero.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="Japan-themed monument mapping show, Great Wave and rising sun">
           <canvas class="scrub-canvas" aria-hidden="true"></canvas>
           <div class="scrub-hint">
             <span class="scrub-hint-icon">&harr;</span>
@@ -1121,7 +1132,7 @@
 
     <div class="work-item" data-cat="monument">
       <div class="work-card">
-        <div class="work-media work-cover velocity-media"><img width="1600" height="900" class="lb" loading="lazy" decoding="async" src="images/marka-e-haq.jpg" alt="Marka-e-Haq Monument projection mapping"></div>
+        <div class="work-media work-cover velocity-media"><img width="1600" height="900" class="lb" loading="lazy" decoding="async" src="images/marka-e-haq.webp" srcset="images/marka-e-haq-800.webp 800w, images/marka-e-haq.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="Marka-e-Haq Monument projection mapping"></div>
         <div class="work-meta-bar">
           <h3>Marka-e-Haq Monument</h3>
           <span class="meta">2026 · Monument mapping</span>
@@ -1131,7 +1142,7 @@
 
     <div class="work-item" data-cat="monument">
       <div class="work-card">
-        <div class="work-media work-cover velocity-media"><img width="1600" height="900" class="lb" loading="lazy" decoding="async" src="images/icc-launch.jpg" alt="ICC launch event monument mapping"></div>
+        <div class="work-media work-cover velocity-media"><img width="1600" height="900" class="lb" loading="lazy" decoding="async" src="images/icc-launch.webp" srcset="images/icc-launch-800.webp 800w, images/icc-launch.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="ICC launch event monument mapping"></div>
         <div class="work-meta-bar">
           <h3>ICC Launch Event</h3>
           <span class="meta">2025 · Pakistan Monument</span>
@@ -1141,7 +1152,7 @@
 
     <div class="work-item" data-cat="monument">
       <div class="work-card">
-        <div class="work-media work-cover velocity-media"><img width="1600" height="865" class="lb" loading="lazy" decoding="async" src="images/mohatta-palace.jpg" alt="Mohatta Palace projection mapping, Karachi"></div>
+        <div class="work-media work-cover velocity-media"><img width="1600" height="865" class="lb" loading="lazy" decoding="async" src="images/mohatta-palace.webp" srcset="images/mohatta-palace-800.webp 800w, images/mohatta-palace.webp 1600w" sizes="(max-width: 800px) 100vw, 1200px" alt="Mohatta Palace projection mapping, Karachi"></div>
         <div class="work-meta-bar">
           <h3>Mohatta Palace</h3>
           <span class="meta">2024 · BankIslami · Karachi</span>
@@ -1152,8 +1163,8 @@
     <div class="work-item" data-cat="monument">
       <div class="work-card">
         <div class="gallery-2">
-          <div class="work-media"><img width="1100" height="733" class="lb" loading="lazy" decoding="async" src="images/parliament-1.jpg" alt="Parliament House Islamabad projection mapping, awareness campaign"></div>
-          <div class="work-media"><img width="1100" height="733" class="lb" loading="lazy" decoding="async" src="images/parliament-2.jpg" alt="Parliament House Islamabad projection mapping, Pakistan flag"></div>
+          <div class="work-media"><img width="1100" height="733" class="lb" loading="lazy" decoding="async" src="images/parliament-1.webp" srcset="images/parliament-1-800.webp 800w, images/parliament-1.webp 1100w" sizes="(max-width: 800px) 100vw, 50vw" alt="Parliament House Islamabad projection mapping, awareness campaign"></div>
+          <div class="work-media"><img width="1100" height="733" class="lb" loading="lazy" decoding="async" src="images/parliament-2.webp" srcset="images/parliament-2-800.webp 800w, images/parliament-2.webp 1100w" sizes="(max-width: 800px) 100vw, 50vw" alt="Parliament House Islamabad projection mapping, Pakistan flag"></div>
         </div>
         <div class="work-meta-bar">
           <h3>Parliament House</h3>
@@ -1165,10 +1176,10 @@
     <div class="work-item" data-cat="monument">
       <div class="work-card">
         <div class="gallery-4">
-          <div class="work-media"><img width="648" height="1152" class="lb" loading="lazy" decoding="async" src="images/minar-1.jpg" alt="Minar-e-Pakistan mapping, red with heart"></div>
-          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-2.jpg" alt="Minar-e-Pakistan mapping, gold"></div>
-          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-3.jpg" alt="Minar-e-Pakistan mapping, white beams"></div>
-          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-4.jpg" alt="Minar-e-Pakistan mapping, colorful pattern"></div>
+          <div class="work-media"><img width="648" height="1152" class="lb" loading="lazy" decoding="async" src="images/minar-1.webp" alt="Minar-e-Pakistan mapping, red with heart"></div>
+          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-2.webp" alt="Minar-e-Pakistan mapping, gold"></div>
+          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-3.webp" alt="Minar-e-Pakistan mapping, white beams"></div>
+          <div class="work-media"><img width="720" height="1280" class="lb" loading="lazy" decoding="async" src="images/minar-4.webp" alt="Minar-e-Pakistan mapping, colorful pattern"></div>
         </div>
         <div class="work-meta-bar">
           <h3>Minar-e-Pakistan</h3>
@@ -1181,10 +1192,10 @@
       <div class="work-card">
         <div class="gallery-5">
           <div class="work-media" style="aspect-ratio:8/5;"><img class="lb" loading="lazy" decoding="async" src="images/noor-mahal-aks.webp" width="1920" height="1200" alt="Noor Mahal projection mapping by AKS Creative Studio, with the palace facade lit in green and blue" style="object-fit:contain;"></div>
-          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-1.jpg" alt="Heritage building mapping, 75th anniversary"></div>
-          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-2.jpg" alt="Ornate arch heritage mapping"></div>
-          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-3.jpg" alt="Red fort Graana.com branded mapping"></div>
-          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-4.jpg" alt="Colorful domes mapping, Noor Mahal"></div>
+          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-1.webp" alt="Heritage building mapping, 75th anniversary"></div>
+          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-2.webp" alt="Ornate arch heritage mapping"></div>
+          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-3.webp" alt="Red fort Graana.com branded mapping"></div>
+          <div class="work-media" style="aspect-ratio:4/3;"><img width="900" height="725" class="lb" loading="lazy" decoding="async" src="images/heritage-4.webp" alt="Colorful domes mapping, Noor Mahal"></div>
         </div>
         <div class="work-meta-bar">
           <h3>Heritage &amp; Forts</h3>
@@ -1196,10 +1207,10 @@
     <div class="work-item" data-cat="events">
       <div class="work-card">
         <div class="gallery-5">
-          <div class="work-media"><img width="1280" height="720" class="lb" loading="lazy" decoding="async" src="images/events-1.jpg" alt="Future Fest live event visuals and stage"></div>
-          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-2.jpg" alt="Centaurus mall building projection mapping"></div>
-          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-3.jpg" alt="Marriott hotel building projection mapping"></div>
-          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-4.jpg" alt="Bahria Town building projection mapping, Pakistan flag"></div>
+          <div class="work-media"><img width="1280" height="720" class="lb" loading="lazy" decoding="async" src="images/events-1.webp" srcset="images/events-1-800.webp 800w, images/events-1.webp 1280w" sizes="(max-width: 800px) 100vw, 1200px" alt="Future Fest live event visuals and stage"></div>
+          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-2.webp" alt="Centaurus mall building projection mapping"></div>
+          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-3.webp" alt="Marriott hotel building projection mapping"></div>
+          <div class="work-media"><img width="900" height="506" class="lb" loading="lazy" decoding="async" src="images/events-4.webp" alt="Bahria Town building projection mapping, Pakistan flag"></div>
         </div>
         <div class="work-meta-bar">
           <h3>Events &amp; Venues</h3>
@@ -1219,28 +1230,28 @@
     </div>
     <div class="formats-grid">
       <div class="format-card">
-        <div class="fmt-img"><img width="900" height="577" class="lb" loading="lazy" decoding="async" src="images/format-vr.jpg" alt="Virtual reality headset walkthrough"></div>
+        <div class="fmt-img"><img width="900" height="577" class="lb" loading="lazy" decoding="async" src="images/format-vr.webp" alt="Virtual reality headset walkthrough"></div>
         <div class="fmt-body">
           <h3>Virtual Reality</h3>
           <p>Headset walkthroughs for sales, planning and exhibition.</p>
         </div>
       </div>
       <div class="format-card">
-        <div class="fmt-img"><img width="540" height="720" class="lb" loading="lazy" decoding="async" src="images/format-ar.jpg" alt="Augmented reality activation"></div>
+        <div class="fmt-img"><img width="540" height="720" class="lb" loading="lazy" decoding="async" src="images/format-ar.webp" alt="Augmented reality activation"></div>
         <div class="fmt-body">
           <h3>Augmented Reality</h3>
           <p>Content anchored to a real place, seen through a phone or lens.</p>
         </div>
       </div>
       <div class="format-card">
-        <div class="fmt-img"><img width="464" height="848" class="lb" loading="lazy" decoding="async" src="images/format-holofans.jpg" alt="HoloFan floating image display"></div>
+        <div class="fmt-img"><img width="464" height="848" class="lb" loading="lazy" decoding="async" src="images/format-holofans.webp" alt="HoloFan floating image display"></div>
         <div class="fmt-body">
           <h3>HoloFans &amp; Mesh</h3>
           <p>Images that appear to float free of any surface.</p>
         </div>
       </div>
       <div class="format-card">
-        <div class="fmt-img"><img width="700" height="1243" class="lb" loading="lazy" decoding="async" src="images/format-skymesh.jpg" alt="SkyMesh frameless display screen"></div>
+        <div class="fmt-img"><img width="700" height="1243" class="lb" loading="lazy" decoding="async" src="images/format-skymesh.webp" alt="SkyMesh frameless display screen"></div>
         <div class="fmt-body">
           <h3>SkyMesh</h3>
           <p>A screen with no frame, held up by the sky itself.</p>
@@ -1298,7 +1309,7 @@
     </div>
     <div class="about-grid">
       <div class="about-photo bracketed">
-        <img width="714" height="714" src="images/fahad-portrait.jpg" alt="Fahad Khan Tareen, projection mapping artist" loading="lazy" decoding="async">
+        <img width="714" height="714" src="images/fahad-portrait.webp" alt="Fahad Khan Tareen, projection mapping artist" loading="lazy" decoding="async">
       </div>
       <div class="about-text">
         <p class="about-lead word-reveal">Fahad Khan Tareen is a projection mapping artist and immersive experience designer working at the intersection of architecture, motion and light. For seven years his work has turned static surfaces (national monuments, palaces, forts, hotel and mall facades) into moving canvases, run live in front of a crowd.</p>
@@ -1308,6 +1319,50 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="field-notes" class="section-pad reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FIELD NOTES</span>
+      <h2>From the blog</h2>
+    </div>
+    <div class="capability-grid faq-grid notes-grid">
+      <a class="capability" href="/blog/what-drives-the-cost-of-a-projection-mapping-show">
+        <h3>What drives the cost of a projection mapping show</h3>
+        <p>Where the budget goes in a projection mapping show: content, projectors, rigging, crew and hidden costs, plus a checklist for comparing client quotes.</p>
+      </a>
+      <a class="capability" href="/blog/what-to-send-a-studio-before-a-projection-mapping-quote">
+        <h3>What to send a studio before a projection mapping quote</h3>
+        <p>Which drawings, photos, site details and approvals to send a studio so your projection mapping quote is accurate, comparable and free of padding.</p>
+      </a>
+      <a class="capability" href="/blog/surveying-a-building-for-projection-mapping">
+        <h3>Surveying a building for projection mapping</h3>
+        <p>How to survey a building for projection mapping: drawings, laser scanning, photogrammetry, reference points and what to ask for in the final model.</p>
+      </a>
+      <a class="capability" href="/blog/permissions-for-public-projection-mapping-shows">
+        <h3>Permissions for public projection mapping shows</h3>
+        <p>Who has to approve a public projection mapping show: building owners, equipment sites, crowd safety, power, sound and content, with a tracker to plan it.</p>
+      </a>
+      <a class="capability" href="/blog/laser-or-lamp-projectors-for-projection-mapping">
+        <h3>Laser or lamp projectors for projection mapping</h3>
+        <p>Laser or lamp projectors for projection mapping: how light source life, brightness over time, uptime, safety and cost compare, with a checklist for your brief.</p>
+      </a>
+      <a class="capability" href="/blog/projection-mapping-or-led-facade-how-to-choose">
+        <h3>Projection mapping or LED facade: how to choose</h3>
+        <p>How to choose between projection mapping and an LED facade: brightness, fidelity to the architecture, capital versus event cost, regulation and risk compared.</p>
+      </a>
+      <a class="capability" href="/blog/backup-and-redundancy-for-projection-mapping-shows">
+        <h3>Backup and redundancy for projection mapping shows</h3>
+        <p>What to duplicate in a projection mapping show: media servers, projectors, power, content and procedure, with a table and checklist for planners.</p>
+      </a>
+      <a class="capability" href="/blog/show-week-schedule-for-projection-mapping">
+        <h3>A show-week schedule for projection mapping</h3>
+        <p>A day-by-day schedule for projection mapping show week: load-in, alignment, content review and rehearsal, plus a checklist to keep the build on time.</p>
+      </a>
+    </div>
+    <p class="notes-more"><a href="/blog/">All Field Notes &rarr;</a></p>
   </div>
 </section>
 
@@ -1408,13 +1463,15 @@
   (function(){
     const gate = document.getElementById('startGate');
     if (!gate) return;
-    document.documentElement.classList.add('gate-locked');
+    const skipGate = document.documentElement.classList.contains('gate-skip');
+    if (skipGate) gate.querySelector('video')?.remove();
+    else document.documentElement.classList.add('gate-locked');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const tilesWrap = document.getElementById('gateTiles');
     const fireworks = document.getElementById('heroFireworks');
     const COLS = 16, ROWS = 10, TILE_DURATION = 0.6;
     let maxDelay = 0;
-    if (tilesWrap && !reduceMotion){
+    if (tilesWrap && !reduceMotion && !skipGate){
       const frag = document.createDocumentFragment();
       for (let i = 0; i < COLS * ROWS; i++){
         const tile = document.createElement('div');
@@ -1435,6 +1492,7 @@
     function start(){
       if (started) return;
       started = true;
+      try { localStorage.setItem('aksGateSeen', '1'); } catch(e) {}
       gate.removeEventListener('click', start);
       window.removeEventListener('keydown', onKey);
       document.documentElement.classList.remove('gate-locked');
@@ -1451,7 +1509,7 @@
         const playback = fireworks.play();
         if (playback?.catch) playback.catch(() => {});
       }
-      if (tilesWrap && !reduceMotion){
+      if (tilesWrap && !reduceMotion && !skipGate){
         gate.classList.add('dissolving');
         setTimeout(() => gate.classList.add('hidden'), (maxDelay + TILE_DURATION) * 1000 + 50);
       } else {
@@ -1459,6 +1517,7 @@
       }
     }
     function onKey(e){ if (e.key === ' ' || e.key === 'Enter') start(); }
+    if (skipGate) { start(); return; }
     gate.addEventListener('click', start);
     window.addEventListener('keydown', onKey);
   })();
